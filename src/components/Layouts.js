@@ -64,12 +64,12 @@ function ClippedDrawer(props) {
 					<NavTab/>
 				</main>
 				<Drawer
+					anchor="right"
 					className={classes.drawer}
-					variant="permanent"
+					variant= {window.innerWidth > 450 ? "permanent" : "temporary"}
 					classes={{
 						paper: classes.drawerPaper,
 					}}
-					anchor="right"
 				>
 					<div className={classes.toolbar} />
 					<Vacancies/>

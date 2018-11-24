@@ -4,28 +4,17 @@ import { withStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
-import HelpIcon from '@material-ui/icons/Help';
-import Typography from '@material-ui/core/Typography';
+import AboutIcon from '@material-ui/icons/Info';
+import VacIcon from '@material-ui/icons/Assignment';
+import FleetIcon from '@material-ui/icons/DirectionsBoat';
+import AppIcon from '@material-ui/icons/Description';
+import ContactIcon from '@material-ui/icons/Place';
 
 import AboutUs from '../pages/AboutUs';
 import Fleet from '../pages/Fleet';
 import Application from '../pages/Application';
 import Contacts from '../pages/Contacts';
-
-function TabContainer(props) {
-	return (
-		<Typography component="div" style={{ padding: 8 * 3 }}>
-			{props.children}
-		</Typography>
-	);
-}
-
-TabContainer.propTypes = {
-	children: PropTypes.node.isRequired,
-};
+import Vacancies from '../pages/Vacancies';
 
 const styles = theme => ({
 	root: {
@@ -55,21 +44,22 @@ class ScrollableTabsButtonForce extends React.Component {
 						value={value}
 						onChange={this.handleChange}
 						fullWidth
-						scrollable
 						scrollButtons="on"
 						indicatorColor="primary"
 						textColor="primary"
 					>
-						<Tab label="ABOUT US" icon={<PhoneIcon />} />
-						<Tab label="FLEET" icon={<FavoriteIcon />} />
-						<Tab label="APPLICATION" icon={<PersonPinIcon />} />
-						<Tab label="CONTACT" icon={<HelpIcon />} />
+						<Tab label="ABOUT US" icon={<AboutIcon />} />
+						<Tab label={window.innerWidth > 450 ? "VACANCIES" : "VAC"} icon={<VacIcon />} />
+						<Tab label="FLEET" icon={<FleetIcon />} />
+						<Tab label={window.innerWidth > 450 ? "APPLICATION" : "APP"} icon={<AppIcon />} />
+						<Tab label="CONTACT" icon={<ContactIcon />} />
 					</Tabs>
 				</AppBar>
 				{value === 0 && <AboutUs/>}
-				{value === 1 && <Fleet/>}
-				{value === 2 && <Application/>}
-				{value === 3 && <Contacts/>}
+				{value === 1 && <Vacancies/>}
+				{value === 2 && <Fleet/>}
+				{value === 3 && <Application/>}
+				{value === 4 && <Contacts/>}
 			</div>
 		);
 	}
