@@ -5,12 +5,15 @@ import Drawer from '@material-ui/core/Drawer';
 import AppBar from '@material-ui/core/AppBar';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
 import Vacancies from './LayDrawer';
 import NavTab from './LayNavTab';
 import Footer from './LayFooter';
 
-import logo from './img/logo white2.gif';
+import logo from './img/logowhite.gif';
+import logo2 from './img/logowhite2.gif';
 
 const drawerWidth = 240;
 
@@ -41,9 +44,9 @@ const styles = theme => ({
 		flexGrow: 1,
 	},
 	toolbar: theme.mixins.toolbar,
-	logo: {
-		width: 275,
-		height: 41,
+	stylesFoot: {
+		alignItems: 'center',
+		position: 'relative',
 	},
 });
 
@@ -54,9 +57,18 @@ function ClippedDrawer(props) {
 		<div className={classes.root}>
 			<div className={classes.appFrame}>
 				<CssBaseline/>
-				<AppBar position="fixed" className={classes.appBar}>
+				<AppBar position="fixed" className={classes.appBar} color="primary">
 					<Toolbar>
-						<img className={classes.logo} alt='icon' src={logo}/>
+						<Grid container className={classes.stylesFoot} justify={'space-between'}>
+							<Grid item xs={2}>
+								{window.innerWidth > 450 ? <img style={{width: 275, height: 41}} alt='icon' src={logo2}/> : <img style={{width: 80, height: 41}} alt='icon' src={logo}/>}
+							</Grid>
+							<Grid item xs={2} style={{minWidth:'170px'}}>
+								<Typography noWrap> +38-0629-41-71-48 /49 /50 </Typography>
+								<Typography noWrap> +38-0629-41-36-38 /25 </Typography>
+								<Typography noWrap> info@bark.com.ua </Typography>
+							</Grid>
+						</Grid>
 					</Toolbar>
 				</AppBar>
 				<main className={classes.content}>

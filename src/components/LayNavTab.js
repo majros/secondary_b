@@ -39,14 +39,14 @@ class ScrollableTabsButtonForce extends React.Component {
 
 		return (
 			<div className={classes.root}>
-				<AppBar position="static" color="default">
+				<AppBar position="static" color="primary">
 					<Tabs
 						value={value}
 						onChange={this.handleChange}
 						fullWidth
 						scrollButtons="on"
-						indicatorColor="primary"
-						textColor="primary"
+						indicatorColor="secondary"
+						textColor="inherit"
 					>
 						<Tab label="ABOUT US" icon={<AboutIcon />} />
 						<Tab label={window.innerWidth > 450 ? "VACANCIES" : "VAC"} icon={<VacIcon />} />

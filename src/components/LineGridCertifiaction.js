@@ -6,7 +6,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import Dialog from '@material-ui/core/Dialog';
 
 import license from './img/_License.jpg'
-import mlc from './img/_MLC 04.2018.jpg'
+import mlc from './img/_MLC04.2018.jpg'
 
 const styles = theme => ({
 	root: {

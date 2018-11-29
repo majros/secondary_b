@@ -23,7 +23,7 @@ class Contacts extends React.Component {
 		const {classes} = this.props;
 
 		return <React.Fragment>
-			<Typography className={classes.typography} variant={'headline'} align={'center'}>
+			<Typography className={classes.typography} variant={'h5'} align={'center'}>
 				We are always glad to see you in our office at:
 			</Typography>
 			<Table className={classes.table}>
@@ -85,7 +85,7 @@ class Contacts extends React.Component {
 					</TableRow>
 				</TableBody>
 			</Table>
-			<Typography className={classes.typography} variant={'title'} align={'center'}>
+			<Typography className={classes.typography} variant={'h6'} align={'center'}>
 				Crewing agency BARK on the map:
 			</Typography>
 			<MyFancyComponent/>
