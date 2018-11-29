@@ -15,6 +15,8 @@ import Footer from './LayFooter';
 import logo from './img/logowhite.gif';
 import logo2 from './img/logowhite2.gif';
 
+import imgHeader from './img/imgHeader.png';
+
 const drawerWidth = 240;
 
 const styles = theme => ({
@@ -70,6 +72,7 @@ function ClippedDrawer(props) {
 							</Grid>
 						</Grid>
 					</Toolbar>
+					{/*<img style={{width: '100%'}} alt='icon' src={imgHeader}/>*/}
 				</AppBar>
 				<main className={classes.content}>
 					<div className={classes.toolbar} />
